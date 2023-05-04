@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轉華氏慑氏</title>
+</head>
+
+<body>
+    <h2>輸入溫度轉成華氏攝氏</h2>
+    <input type="text" name="txt" id="txt" value="20">
+    <input type="button" id="f" value="轉華氏" onclick="click1()">
+    <input type="button" id="c" value="轉慑氏" onclick="click2()">
+    <script>
+        let txt1 = document.getElementById("txt");
+
+        function click1() {
+            let f = (txt1.value - 32) * 5 / 9;
+            f = Math.floor(f);
+            alert(f);
+        }
+        function click2() {
+            let c = txt1.value * 1.8 + 32;
+            c = Math.floor(c)
+            alert(c);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日</title>
+</head>
+
+<body>
+    <h2>請輸入西元年生日</h2>
+    <input type="text" id="txt" value="2000">
+    <input type="button" id="but" value="送出" onclick="click1()">
+    <script>
+
+        function click1() {
+            let txt1 = document.getElementById("txt");
+            let toDay = new Date();
+            let years = toDay.getFullYear()
+            let anser = years - txt1.value;
+            alert(anser);
+        }
+
+
+    </script>
+</body>
+
+</html>

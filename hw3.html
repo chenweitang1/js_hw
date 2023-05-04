@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜數字遊戲</title>
+</head>
+
+<body>
+
+    <script>
+
+        let answer = Math.floor(Math.random() * 100);
+
+        while (true) {
+            let guessAnswer = prompt(("請輸入猜測的數字(1~100)，輸入0離開遊戲"));
+            alert(answer);
+            if (answer > guessAnswer && guessAnswer != 0) {
+                console.log("數字太小了");
+            } else if (answer < guessAnswer && guessAnswer != 0) {
+                console.log("數字太大了");
+            } else if (guessAnswer === '0' || guessAnswer == answer) {
+                let message = '';
+                if (guessAnswer == 0) {
+                    message += '離開遊戲';
+                } else {
+                    message += '猜對了';
+                }
+                alert(message);
+                console.log(message);
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>

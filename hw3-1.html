@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .name1 {
+            border: 1px solid black;
+            width: 50px;
+            text-align: center;
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label>數字:<input type="text" name="point" id="point1" value="20"></label>
+        <input class="sub" id="submit1" type="button" onclick="checkPoint()" value="送出">
+        <p class="name1"></p>
+    </div>
+    <script>
+        let count = 1;
+        let new1 = document.querySelector(".name1");
+        let answer = Math.floor(Math.random() * 100) + 1;
+        let submit1 = document.getElementById("submit1");
+        let point1 = document.getElementById("point1"); {
+            console.log(submit1.value);
+        }
+        console.log(answer);
+        function checkPoint() {
+            count++;
+            let point2 = point1.value;
+            if (point2 === answer) {
+                console.log("答對了")
+            } else if (count === 10) {
+                gameOver();
+            } else {
+                if (point2 > answer) {
+                    console.log("數字太大")
+
+                } else if (point2 < answer) {
+                    console.log("數字太小")
+
+                }
+            }
+            new1.textContent = count;
+        }
+        function gameOver() {
+            submit1.disabled = true;
+        }
+
+    </script>
+</body>
+
+</html>

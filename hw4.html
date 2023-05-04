@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>輸入西元年，判定是否是閏年</title>
+</head>
+
+<body>
+    <script>
+        const age = prompt("輸入西元年，判定是否是閏年");
+        if (age % 400 == 0) {
+            console.log("為閏年")
+        } else if (age % 4 == 0 && age % 100 != 0) {
+            console.log("為閏年")
+        } else if (age % 4 != 0) {
+            console.log("為平年")
+        } else if (age % 100 == 0 && age % 400 != 0) {
+            console.log("為平年")
+        }
+    </script>
+</body>
+
+</html>

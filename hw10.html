@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密碼檢查</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <input type="button" value="送出" id="but1" onclick="click1()">
+    <script>
+        let txt2 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+        let txt1 = document.getElementById("txt");
+        function click1() {
+            let but1 = txt1.value;
+            if (txt1.value.search(txt2) != -1) {
+                alert("格式正確");
+            } else {
+                alert("格式錯誤");
+            }
+        } 
+    </script>
+</body>
+
+</html>
